@@ -1,0 +1,8 @@
+.env
+artifacts/images/*.tar
+artifacts/images/*.tar.gz
+artifacts/images/*.tgz
+certs/*.crt
+certs/*.key
+dist/
+*.log
