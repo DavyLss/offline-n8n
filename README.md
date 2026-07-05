@@ -167,6 +167,15 @@ This is a focused V1:
 - no automatic certificate issuance
 - production deployments should replace the self-signed TLS fallback
 
+## Health check
+
+- **Endpoint** : `GET /healthz`
+- **Port HTTP** : `8080` (port exposé par Caddy)
+- **Port HTTPS** : `8443` (derrière la terminaison TLS)
+- **Réponse attendue** : `200 OK`
+
+Ce endpoint est utilisé par la VIP ou un load‑balancer pour tester l'état du service.
+
 ## Documentation
 
 - `docs/architecture.md`
