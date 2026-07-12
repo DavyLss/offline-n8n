@@ -172,9 +172,12 @@ During license generation and activation, n8n contacts the following external FQ
 
 | Type | IP |
 |---|---|
-| AAAA | `2606:4700:20::ac43:4466` |
-| AAAA | `2606:4700:20::681a:cbb` |
-| AAAA | `2606:4700:20::681a:dbb` |
+| A (IPv4) | `104.26.12.187` |
+| A (IPv4) | `104.26.13.187` |
+| A (IPv4) | `172.67.68.102` |
+| AAAA (IPv6) | `2606:4700:20::ac43:4466` |
+| AAAA (IPv6) | `2606:4700:20::681a:cbb` |
+| AAAA (IPv6) | `2606:4700:20::681a:dbb` |
 
 ### Notes
 
