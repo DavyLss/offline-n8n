@@ -159,6 +159,34 @@ Actual egress blocking still has to be enforced outside the repo, at host or net
 
 See `docs/no-internet-egress.md`.
 
+## External FQDN calls for license activation
+
+During license generation and activation, n8n contacts the following external FQDNs:
+
+| FQDN | Purpose | Protocol | Port |
+|---|---|---|---|
+| `enterprise.n8n.io` | Request community license | HTTPS | 443 |
+| `license.n8n.io` | Activate license key | HTTPS | 443 |
+
+### IP addresses (Cloudflare CDN)
+
+| Type | IP |
+|---|---|
+| AAAA | `2606:4700:20::ac43:4466` |
+| AAAA | `2606:4700:20::681a:cbb` |
+| AAAA | `2606:4700:20::681a:dbb` |
+
+### Notes
+
+- These FQDNs are only needed **once** during initial license activation.
+- After activation, they can be safely blocked for offline operation.
+- For offline deployment, add these to your firewall deny list:
+
+```
+enterprise.n8n.io
+license.n8n.io
+```
+
 ## Limits
 
 This is a focused V1:
