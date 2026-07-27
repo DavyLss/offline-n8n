@@ -8,7 +8,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - /opt/postgresql/data:/var/lib/postgresql/data
     networks:
       - backend
     shm_size: 256mb
@@ -45,7 +45,7 @@ services:
       DB_POSTGRESDB_USER: ${POSTGRES_USER}
       DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - n8n_data:/home/node/.n8n
+      - /opt/n8n/data:/home/node/.n8n
     networks:
       - backend
       - frontend
@@ -69,8 +69,8 @@ services:
     volumes:
       - ../certs:/certs:ro
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
+      - /opt/caddy/data:/data
+      - /opt/caddy/config:/config
     networks:
       - frontend
     depends_on:
