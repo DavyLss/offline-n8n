@@ -81,12 +81,6 @@ services:
           cpus: '0.5'
           memory: 256M
 
-volumes:
-  postgres_data:
-  n8n_data:
-  caddy_data:
-  caddy_config:
-
 networks:
   frontend:
   backend:
